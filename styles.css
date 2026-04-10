@@ -37,15 +37,15 @@ body::before {
 
 /* Header */
 header {
-    background: rgba(0, 119, 190, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    color: #ffffff;
+    color: #1f5a7a;
     padding: 20px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid #0077BE;
 }
 
 header .container {
@@ -57,7 +57,7 @@ header .container {
 .logo {
     height: 70px;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+    filter: drop-shadow(0 0 8px rgba(0, 119, 190, 0.3));
 }
 
 .logo:hover {
@@ -72,7 +72,7 @@ nav ul {
 }
 
 nav a {
-    color: #ffffff;
+    color: #1f5a7a;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1em;
@@ -83,10 +83,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #00D4FF;
-    background: rgba(255, 255, 255, 0.1);
+    color: #0077BE;
+    background: rgba(0, 119, 190, 0.1);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 119, 190, 0.2);
 }
 
 nav a::after {
@@ -113,13 +113,13 @@ nav a:hover::after {
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 119, 190, 0.1);
 }
 
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background: #fff;
+    background: #1f5a7a;
     margin: 3px 0;
     transition: 0.3s;
     border-radius: 2px;
@@ -1022,14 +1022,13 @@ form textarea {
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
-    }
     
     nav ul {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(0, 119, 190, 0.95);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         flex-direction: column;
         gap: 0;
@@ -1038,7 +1037,7 @@ form textarea {
         visibility: hidden;
         transition: all 0.3s ease;
         border-radius: 0 0 15px 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
     
     nav ul.active {
@@ -1048,7 +1047,7 @@ form textarea {
     }
     
     nav li {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 119, 190, 0.1);
     }
     
     nav a {
