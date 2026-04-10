@@ -54,14 +54,117 @@ header .container {
     align-items: center;
 }
 
+/* LOGO CONTAINER */
 .logo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 70px;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 0 8px rgba(0, 119, 190, 0.3));
 }
 
-.logo:hover {
-    transform: scale(1.05) rotate(2deg);
+/* BRIDGE ARC */
+.bridge {
+    width: 120px;
+    height: 60px;
+    border-top: 8px solid #0077BE;
+    border-radius: 60px 60px 0 0;
+    margin: 0 auto 5px;
+    position: relative;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: drawBridge 1s ease forwards;
+}
+
+/* BRIDGE BARS */
+.bridge::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    height: 35px;
+
+    background: repeating-linear-gradient(
+        to right,
+        #0077BE 0px,
+        #0077BE 4px,
+        transparent 4px,
+        transparent 10px
+    );
+
+    opacity: 0;
+    animation: showBars 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+/* BRAND TEXT */
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0077BE;
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: textFade 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+/* ORANGE DOT */
+.brand span {
+    color: #00D4FF;
+    display: inline-block;
+
+    animation: bounceDot 0.6s ease infinite alternate;
+    animation-delay: 2s;
+}
+
+/* NEPAL TEXT */
+.nepal {
+    letter-spacing: 3px;
+    font-size: 10px;
+    color: #0077BE;
+    margin-top: 5px;
+
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+/* ANIMATIONS */
+@keyframes drawBridge {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes showBars {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceDot {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-4px);
+    }
 }
 
 nav ul {
