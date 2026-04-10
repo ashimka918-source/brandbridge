@@ -3,11 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navUl = document.querySelector('nav ul');
-    
-    if (menuToggle) {
+
+    if (menuToggle && navUl) {
         menuToggle.addEventListener('click', function() {
             navUl.classList.toggle('active');
             this.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const navLinks = navUl.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navUl.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!menuToggle.contains(event.target) && !navUl.contains(event.target)) {
+                navUl.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
         });
     }
 
