@@ -8,8 +8,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.8;
-    color: #2c3e50;
-    background: linear-gradient(135deg, #4a0e4e 0%, #6a1b9a 50%, #8e24aa 100%);
+    color: #1f5a7a;
+    background: linear-gradient(135deg, #0077BE 0%, #0CB1F0 50%, #00B4D8 100%);
     background-attachment: fixed;
     min-height: 100vh;
     overflow-x: hidden;
@@ -23,9 +23,9 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(106, 27, 154, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(0, 200, 83, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(76, 175, 80, 0.2) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(12, 177, 240, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(30, 144, 255, 0.2) 0%, transparent 50%);
     z-index: -1;
 }
 
@@ -37,7 +37,7 @@ body::before {
 
 /* Header */
 header {
-    background: rgba(74, 14, 78, 0.95);
+    background: rgba(0, 119, 190, 0.95);
     backdrop-filter: blur(10px);
     color: #ffffff;
     padding: 20px 0;
@@ -57,7 +57,7 @@ header .container {
 .logo {
     height: 70px;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
 }
 
 .logo:hover {
@@ -83,7 +83,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #00c853;
+    color: #00D4FF;
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -96,7 +96,7 @@ nav a::after {
     height: 3px;
     bottom: 0;
     left: 50%;
-    background: linear-gradient(90deg, #00c853, #4caf50);
+    background: linear-gradient(90deg, #00D4FF, #1E90FF);
     transition: all 0.3s ease;
     border-radius: 2px;
 }
@@ -165,7 +165,7 @@ section:nth-child(even) {
 }
 
 .hero {
-    background: linear-gradient(135deg, #4a0e4e 0%, #6a1b9a 50%, #8e24aa 100%);
+    background: linear-gradient(135deg, #0077BE 0%, #0CB1F0 50%, #00B4D8 100%);
     color: #fff;
     text-align: center;
     padding: 150px 0;
@@ -201,7 +201,7 @@ section:nth-child(even) {
     font-size: 4em;
     margin-bottom: 20px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(45deg, #fff, #00c853);
+    background: linear-gradient(45deg, #fff, #00D4FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -209,8 +209,8 @@ section:nth-child(even) {
 }
 
 @keyframes textGlow {
-    from { filter: drop-shadow(0 0 10px rgba(0, 200, 83, 0.5)); }
-    to { filter: drop-shadow(0 0 20px rgba(0, 200, 83, 1)); }
+    from { filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5)); }
+    to { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 1)); }
 }
 
 .hero p {
@@ -231,7 +231,7 @@ section:nth-child(even) {
 }
 
 .btn {
-    background: linear-gradient(135deg, #00c853 0%, #4caf50 50%, #00c853 100%);
+    background: linear-gradient(135deg, #0CB1F0 0%, #00D4FF 50%, #1E90FF 100%);
     color: #ffffff;
     padding: 18px 35px;
     text-decoration: none;
@@ -263,7 +263,7 @@ section:nth-child(even) {
 .btn:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(135deg, #4caf50 0%, #00c853 50%, #4caf50 100%);
+    background: linear-gradient(135deg, #1E90FF 0%, #00D4FF 50%, #0CB1F0 100%);
 }
 
 .btn:active {
@@ -297,7 +297,7 @@ section:nth-child(even) {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #4a0e4e, #6a1b9a, #8e24aa, #00c853);
+    background: linear-gradient(90deg, #0077BE, #0CB1F0, #00B4D8, #1E90FF);
     border-radius: 20px 20px 0 0;
 }
 
@@ -308,7 +308,7 @@ section:nth-child(even) {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(from 0deg, transparent, rgba(74, 14, 78, 0.1), transparent);
+    background: conic-gradient(from 0deg, transparent, rgba(0, 119, 190, 0.1), transparent);
     animation: rotate 10s linear infinite;
     z-index: -1;
 }
@@ -325,9 +325,9 @@ section:nth-child(even) {
 
 .service i {
     font-size: 4em;
-    color: #4a0e4e;
+    color: #0077BE;
     margin-bottom: 25px;
-    text-shadow: 0 0 20px rgba(74, 14, 78, 0.3);
+    text-shadow: 0 0 20px rgba(0, 119, 190, 0.3);
     animation: iconPulse 3s ease-in-out infinite;
 }
 
@@ -338,7 +338,7 @@ section:nth-child(even) {
 
 .service h3 {
     margin-bottom: 20px;
-    color: #4a0e4e;
+    color: #0077BE;
     font-size: 1.5em;
     position: relative;
 }
@@ -351,7 +351,7 @@ section:nth-child(even) {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: linear-gradient(90deg, #4a0e4e, #00c853);
+    background: linear-gradient(90deg, #0077BE, #1E90FF);
     border-radius: 2px;
 }
 
@@ -363,16 +363,16 @@ section:nth-child(even) {
 
 /* Why choose */
 .why-choose {
-    background: linear-gradient(135deg, rgba(74, 14, 78, 0.1) 0%, rgba(106, 27, 154, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(0, 119, 190, 0.1) 0%, rgba(12, 177, 240, 0.1) 100%);
     padding: 100px 0;
 }
 
 .why-choose h2 {
     text-align: center;
     margin-bottom: 60px;
-    color: #fff;
+    color: #1f5a7a;
     font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .why-choose ul {
@@ -405,7 +405,7 @@ section:nth-child(even) {
     left: 30px;
     top: 30px;
     font-size: 2em;
-    color: #00c853;
+    color: #0077BE;
 }
 
 .why-choose li:nth-child(2)::before { content: '🔒'; }
@@ -414,7 +414,7 @@ section:nth-child(even) {
 
 /* Contact preview */
 .contact-preview {
-    background: linear-gradient(135deg, #4a0e4e 0%, #2d1b3d 100%);
+    background: linear-gradient(135deg, #0077BE 0%, #003d82 100%);
     color: #fff;
     text-align: center;
     padding: 80px 0;
@@ -450,7 +450,7 @@ section:nth-child(even) {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #4a0e4e 0%, #2d1b3d 100%);
+    background: linear-gradient(135deg, #0077BE 0%, #003d82 100%);
     color: #ffffff;
     padding: 50px 0 30px;
     text-align: center;
@@ -466,8 +466,8 @@ footer::before {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 20%, rgba(0, 200, 83, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(76, 175, 80, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(30, 144, 255, 0.1) 0%, transparent 50%);
 }
 
 footer .container {
@@ -500,7 +500,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #00c853;
+    color: #00D4FF;
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
@@ -597,7 +597,7 @@ form textarea {
 
 /* About Section Enhancements */
 .about-hero {
-    background: linear-gradient(135deg, #4a0e4e 0%, #6a1b9a 50%, #8e24aa 100%);
+    background: linear-gradient(135deg, #0077BE 0%, #0CB1F0 50%, #00B4D8 100%);
     color: #fff;
     text-align: center;
     padding: 120px 0;
@@ -628,7 +628,7 @@ form textarea {
     font-size: 3.5em;
     margin-bottom: 20px;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(45deg, #fff, #00c853);
+    background: linear-gradient(45deg, #fff, #00D4FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -669,7 +669,7 @@ form textarea {
 .stat-number {
     font-size: 2.2em;
     font-weight: 600;
-    color: #00c853;
+    color: #00D4FF;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
@@ -714,19 +714,19 @@ form textarea {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #4a0e4e, #00c853);
+    background: linear-gradient(90deg, #0077BE, #00D4FF);
     border-radius: 20px 20px 0 0;
 }
 
 .mission-card i, .vision-card i {
     font-size: 3em;
-    color: #4a0e4e;
+    color: #0077BE;
     margin-bottom: 25px;
-    text-shadow: 0 0 20px rgba(74, 14, 78, 0.3);
+    text-shadow: 0 0 20px rgba(0, 119, 190, 0.3);
 }
 
 .mission-card h3, .vision-card h3 {
-    color: #4a0e4e;
+    color: #0077BE;
     margin-bottom: 20px;
     font-size: 1.8em;
 }
@@ -740,13 +740,13 @@ form textarea {
 /* Team Section */
 .team-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, rgba(74, 14, 78, 0.05) 0%, rgba(106, 27, 154, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(0, 119, 190, 0.05) 0%, rgba(12, 177, 240, 0.05) 100%);
 }
 
 .team-section h2 {
     text-align: center;
     margin-bottom: 60px;
-    color: #4a0e4e;
+    color: #0077BE;
     font-size: 2.5em;
     position: relative;
 }
@@ -759,7 +759,7 @@ form textarea {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, #4a0e4e, #00c853);
+    background: linear-gradient(90deg, #0077BE, #1E90FF);
     border-radius: 2px;
 }
 
@@ -801,7 +801,7 @@ form textarea {
 .team-avatar {
     width: 120px;
     height: 120px;
-    background: linear-gradient(135deg, #4a0e4e, #00c853);
+    background: linear-gradient(135deg, #0077BE, #00D4FF);
     border-radius: 50%;
     margin: 0 auto 25px;
     display: flex;
@@ -809,17 +809,17 @@ form textarea {
     justify-content: center;
     font-size: 3em;
     color: #fff;
-    box-shadow: 0 10px 30px rgba(74, 14, 78, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 119, 190, 0.3);
 }
 
 .team-member h4 {
-    color: #4a0e4e;
+    color: #0077BE;
     margin-bottom: 10px;
     font-size: 1.4em;
 }
 
 .team-role {
-    color: #00c853;
+    color: #0CB1F0;
     font-weight: 600;
     margin-bottom: 15px;
     font-size: 1em;
@@ -840,7 +840,7 @@ form textarea {
 .process-section h2 {
     text-align: center;
     margin-bottom: 60px;
-    color: #4a0e4e;
+    color: #0077BE;
     font-size: 2.5em;
     position: relative;
 }
@@ -853,7 +853,7 @@ form textarea {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, #4a0e4e, #00c853);
+    background: linear-gradient(90deg, #0077BE, #1E90FF);
     border-radius: 2px;
 }
 
@@ -871,7 +871,7 @@ form textarea {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, #4a0e4e, #00c853);
+    background: linear-gradient(90deg, #0077BE, #1E90FF);
     z-index: 1;
 }
 
@@ -895,10 +895,10 @@ form textarea {
     transform: translateX(-50%);
     width: 30px;
     height: 30px;
-    background: linear-gradient(135deg, #4a0e4e, #00c853);
+    background: linear-gradient(135deg, #0077BE, #00D4FF);
     border-radius: 50%;
     border: 3px solid #fff;
-    box-shadow: 0 5px 15px rgba(74, 14, 78, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 119, 190, 0.3);
     z-index: 3;
 }
 
@@ -915,20 +915,20 @@ form textarea {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    color: #4a0e4e;
+    color: #0077BE;
     font-size: 0.9em;
     z-index: 4;
 }
 
 .process-step i {
     font-size: 2.5em;
-    color: #4a0e4e;
+    color: #0077BE;
     margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(74, 14, 78, 0.2);
+    text-shadow: 0 0 15px rgba(0, 119, 190, 0.2);
 }
 
 .process-step h4 {
-    color: #4a0e4e;
+    color: #0077BE;
     margin-bottom: 15px;
     font-size: 1.3em;
 }
@@ -941,13 +941,13 @@ form textarea {
 /* Values Section */
 .values-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, rgba(74, 14, 78, 0.05) 0%, rgba(106, 27, 154, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(0, 119, 190, 0.05) 0%, rgba(12, 177, 240, 0.05) 100%);
 }
 
 .values-section h2 {
     text-align: center;
     margin-bottom: 60px;
-    color: #4a0e4e;
+    color: #0077BE;
     font-size: 2.5em;
     position: relative;
 }
@@ -960,7 +960,7 @@ form textarea {
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, #4a0e4e, #00c853);
+    background: linear-gradient(90deg, #0077BE, #1E90FF);
     border-radius: 2px;
 }
 
@@ -990,7 +990,7 @@ form textarea {
     left: 0;
     right: 0;
     height: 5px;
-    background: linear-gradient(90deg, #4a0e4e, #00c853);
+    background: linear-gradient(90deg, #0077BE, #1E90FF);
     border-radius: 20px 20px 0 0;
 }
 
@@ -1001,14 +1001,14 @@ form textarea {
 
 .value-item i {
     font-size: 3em;
-    color: #4a0e4e;
+    color: #0077BE;
     margin-bottom: 25px;
-    text-shadow: 0 0 20px rgba(74, 14, 78, 0.3);
+    text-shadow: 0 0 20px rgba(0, 119, 190, 0.3);
     animation: iconPulse 4s ease-in-out infinite;
 }
 
 .value-item h4 {
-    color: #4a0e4e;
+    color: #0077BE;
     margin-bottom: 15px;
     font-size: 1.4em;
 }
@@ -1029,7 +1029,7 @@ form textarea {
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(74, 14, 78, 0.95);
+        background: rgba(0, 119, 190, 0.95);
         backdrop-filter: blur(10px);
         flex-direction: column;
         gap: 0;
