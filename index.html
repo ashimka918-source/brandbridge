@@ -4,104 +4,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrandBridge Nepal - Connecting Brands and Creators</title>
-    <link rel="stylesheet" href="css/styles.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* LOGO */
+    .logo {
+        text-align: center;
+    }
+
+    .bridge {
+        width: 120px;
+        height: 60px;
+        border-top: 8px solid #0b1a3a;
+        border-radius: 60px 60px 0 0;
+        margin: 0 auto 5px;
+        position: relative;
+        transform: scaleX(0);
+        transform-origin: center;
+        animation: drawBridge 1s ease forwards;
+    }
+
+    .bridge::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 8px;
+        right: 8px;
+        height: 35px;
+        background: repeating-linear-gradient(
+            to right,
+            #0b1a3a 0px,
+            #0b1a3a 4px,
+            transparent 4px,
+            transparent 10px
+        );
+        opacity: 0;
+        animation: showBars 1s ease forwards;
+        animation-delay: 0.8s;
+    }
+
+    .brand {
+        font-size: 22px;
+        font-weight: bold;
+        color: #0b1a3a;
+        opacity: 0;
+        transform: translateY(10px);
+        animation: textFade 1s ease forwards;
+        animation-delay: 1.2s;
+    }
+
+    .brand span {
+        color: orange;
+        display: inline-block;
+        animation: bounceDot 0.6s ease infinite alternate;
+        animation-delay: 2s;
+    }
+
+    .nepal {
+        letter-spacing: 3px;
+        font-size: 10px;
+        color: #0b1a3a;
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+        animation-delay: 1.6s;
+    }
+
+    @keyframes drawBridge {
+        to { transform: scaleX(1); }
+    }
+
+    @keyframes showBars {
+        to { opacity: 1; }
+    }
+
+    @keyframes textFade {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+
+    @keyframes bounceDot {
+        from { transform: translateY(0); }
+        to { transform: translateY(-4px); }
+    }
+    </style>
+
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <img src="images/logo.jpeg" alt="BrandBridge Nepal Logo" class="logo">
-            <nav>
-                <div class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="for-creators.html">For Creators</a></li>
-                    <li><a href="for-brands.html">For Brands</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+<header>
+    <div class="container">
+
+        <!-- Animated Logo -->
+        <div class="logo">
+            <div class="bridge"></div>
+            <div class="brand">BrandBr<span>i</span>dge</div>
+            <div class="nepal">NEPAL</div>
         </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Connecting Brands and Creators Across Nepal</h1>
-                <p>We help brands connect with digital creators to build powerful and effective sponsorship partnerships.</p>
-                <div class="cta-buttons">
-                    <a href="for-brands.html" class="btn">For Brands</a>
-                    <a href="for-creators.html" class="btn">For Creators</a>
-                </div>
+
+        <nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </section>
-        <section class="services">
-            <div class="container">
-                <h2>Our Services</h2>
-                <div class="service-list">
-                    <div class="service">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Sponsorship Matchmaking</h3>
-                        <p>We connect brands with suitable creators for sponsorship deals.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-bullhorn"></i>
-                        <h3>Influencer Marketing Campaigns</h3>
-                        <p>We manage end-to-end influencer marketing campaigns.</p>
-                    </div>
-                    <div class="service">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Brand Partnership Management</h3>
-                        <p>We handle the management of brand-creator partnerships.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="why-choose">
-            <div class="container">
-                <h2>Why Choose BrandBridge Nepal</h2>
-                <ul>
-                    <li>Deep understanding of the Nepali digital landscape</li>
-                    <li>Transparent and fair brokerage processes</li>
-                    <li>Commitment to building successful partnerships</li>
-                    <li>Dedicated support for both brands and creators</li>
-                </ul>
-            </div>
-        </section>
-        <section class="contact-preview">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p>Email: brandbridgen@gmail.com</p>
-                <p>Instagram: @brandbridgen</p>
-            </div>
-        </section>
-    </main>
-    <footer>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="for-creators.html">For Creators</a></li>
+                <li><a href="for-brands.html">For Brands</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
         <div class="container">
-            <img src="images/logo.png" alt="BrandBridge Nepal Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="for-creators.html">For Creators</a></li>
-                    <li><a href="for-brands.html">For Brands</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <h1>Connecting Brands and Creators Across Nepal</h1>
+            <p>We help brands connect with digital creators to build powerful and effective sponsorship partnerships.</p>
+            <div class="cta-buttons">
+                <a href="for-brands.html" class="btn">For Brands</a>
+                <a href="for-creators.html" class="btn">For Creators</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Sponsorship Matchmaking</h3>
+                    <p>We connect brands with suitable creators for sponsorship deals.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Influencer Marketing Campaigns</h3>
+                    <p>We manage end-to-end influencer marketing campaigns.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Brand Partnership Management</h3>
+                    <p>We handle the management of brand-creator partnerships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose BrandBridge Nepal</h2>
+            <ul>
+                <li>Deep understanding of the Nepali digital landscape</li>
+                <li>Transparent and fair brokerage processes</li>
+                <li>Commitment to building successful partnerships</li>
+                <li>Dedicated support for both brands and creators</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact-preview">
+        <div class="container">
+            <h2>Contact Us</h2>
             <p>Email: brandbridgen@gmail.com</p>
-            <p><a href="https://instagram.com/brandbridgen" target="_blank">Instagram: @brandbridgen</a></p>
-            <p><a href="privacy-policy.html">Privacy Policy</a></p>
-            <p><a href="terms-of-service.html">Terms of Service</a></p>
+            <p>Instagram: @brandbridgen</p>
         </div>
-    </footer>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+
+        <!-- Animated Logo (Footer) -->
+        <div class="logo">
+            <div class="bridge"></div>
+            <div class="brand">BrandBr<span>i</span>dge</div>
+            <div class="nepal">NEPAL</div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="for-creators.html">For Creators</a></li>
+                <li><a href="for-brands.html">For Brands</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <p>Email: brandbridgen@gmail.com</p>
+        <p><a href="https://instagram.com/brandbridgen" target="_blank">Instagram: @brandbridgen</a></p>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+        <p><a href="terms-of-service.html">Terms of Service</a></p>
+    </div>
+</footer>
+
 <script src="js/script.js"></script>
+
 </body>
 </html>
