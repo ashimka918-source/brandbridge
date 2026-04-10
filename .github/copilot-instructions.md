@@ -25,6 +25,8 @@
 
 - [x] Update Statistics - Changed about page statistics from claiming achievements to showing goals and commitments for startup status.
 
+- [x] Remove CSS/JS Folders - Moved styles.css and script.js to root directory, removed css/ and js/ folders for cleaner project structure.
+
 ## Execution Guidelines
 PROGRESS TRACKING:
 - If any tools are available to manage the above todo list, use it to track progress through this checklist.
